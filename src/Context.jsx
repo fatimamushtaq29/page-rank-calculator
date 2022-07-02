@@ -3,38 +3,33 @@ import { createContext, useState } from 'react';
 const Context = createContext();
 
 function ContextProvider(props) {
-
   const [graphData, setGraphData] = useState(graph);
-  const [isAddingNodeDisabled, setIsAddingNodeDisabled] = useState(false);
-  const [showButtons, setShowButtons] = useState(true)
+  const [showButtons, setShowButtons] = useState(true);
   const [isShowForms, setIsShowForms] = useState({
     edgeForm: false,
     neighbors: false,
-    pageRankForm: false
-  })
-  const [isDisplayPageRankResult, setIsDisplayPageRankResult] = useState(false)
-  const [pageRanks, setPageRanks] = useState({})
-
+    pageRankForm: false,
+  });
+  const [isDisplayPageRankResult, setIsDisplayPageRankResult] = useState(false);
+  const [pageRanks, setPageRanks] = useState({});
 
   console.log(graphData);
   // add node to graph which exists as an object of adjacency lists.
   // Example graph = {
-  //  'A': ['B', 'C'], 
+  //  'A': ['B', 'C'],
   //  'B': ['A'],
   //  'C': []
   // }
   function addNode() {
-    if (!isAddingNodeDisabled) {
-      const graphLength = Object.keys(graphData).length;
+    const graphLength = Object.keys(graphData).length;
 
-      // Add node in form of uppercase Alphabets; 65 is the ASCII code for 'A'
-      const nodeLetterToAdd = String.fromCharCode(65 + graphLength);
+    // Add node in form of uppercase Alphabets; 65 is the ASCII code for 'A'
+    const nodeLetterToAdd = String.fromCharCode(65 + graphLength);
 
-      setGraphData((prevGraphData) => ({
-        ...prevGraphData,
-        [nodeLetterToAdd]: [],
-      }));
-    }
+    setGraphData((prevGraphData) => ({
+      ...prevGraphData,
+      [nodeLetterToAdd]: [],
+    }));
   }
 
   // Add Edges to a given node. Edges will be in form of an array: linkNodeArray
@@ -47,33 +42,32 @@ function ContextProvider(props) {
 
   // Show and hide forms functions;
   function showForms(key) {
-    setIsShowForms(prevIsShowForms => ({
+    setIsShowForms((prevIsShowForms) => ({
       ...prevIsShowForms,
-      [key]: true
-    }))
-    setShowButtons(false)
+      [key]: true,
+    }));
+    setShowButtons(false);
   }
-  
 
   function hideForms() {
     setIsShowForms({
       edgeForm: false,
       neighbors: false,
-      pageRankForm: false
-    })
-    setShowButtons(true)
+      pageRankForm: false,
+    });
+    setShowButtons(true);
   }
 
   //Show and hide PageRank results function
   function showPageRankResult(func) {
-    setPageRanks(func())
-    setIsDisplayPageRankResult(true)
-    setShowButtons(false)
+    setPageRanks(func());
+    setIsDisplayPageRankResult(true);
+    setShowButtons(false);
   }
 
   function hidePageRankResult() {
-    setIsDisplayPageRankResult(false)
-    setShowButtons(true)
+    setIsDisplayPageRankResult(false);
+    setShowButtons(true);
   }
 
   //PageRank Functionality
@@ -128,10 +122,12 @@ function ContextProvider(props) {
         (node, index, array) =>
           (previousPageRank[iteration + 1][node] =
             (1 - d) / array.length +
-            d * sumPageRank[node].reduce((sum, element) => sum + element))
+            d * sumPageRank[node].reduce((sum, element) => sum + element, 0))
       );
     }
-    return previousPageRank[previousPageRank.length-1]
+
+    // Return the page ranks of last iteration
+    return previousPageRank[previousPageRank.length - 1];
   }
 
   //Get inbound links of a particular node.
@@ -175,7 +171,7 @@ function ContextProvider(props) {
         isDisplayPageRankResult,
         showPageRankResult,
         hidePageRankResult,
-        pageRanks
+        pageRanks,
       }}
     >
       {props.children}

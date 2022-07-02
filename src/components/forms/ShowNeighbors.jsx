@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { Context } from '../Context';
-import FormElements from './FormElements';
-import InputContainer from './InputContainer';
+import { Context } from '../../Context';
+import FormElements from './formElements/FormElements';
+import InputContainer from './formElements/InputContainer';
 
 export default function ShowNeighbors() {
   const { graphData, hideForms } = useContext(Context);

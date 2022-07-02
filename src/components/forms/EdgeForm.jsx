@@ -1,5 +1,5 @@
-import { EdgeFormContextProvider } from '../EdgeFormContext';
-import FormContainer from './FormContainer';
+import { EdgeFormContextProvider } from '../../EdgeFormContext';
+import FormContainer from './formElements/FormContainer';
 
 export default function EdgeForm() {
   return (

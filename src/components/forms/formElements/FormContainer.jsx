@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { EdgeFormContext } from '../EdgeFormContext';
+import { EdgeFormContext } from '../../../EdgeFormContext';
 import ButtonsForEdgeForm from './ButtonsForEdgeForm';
 import FormElements from './FormElements';
 

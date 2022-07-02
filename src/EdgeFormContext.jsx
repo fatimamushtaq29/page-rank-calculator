@@ -1,4 +1,4 @@
-import InputContainer from './components/InputContainer';
+import InputContainer from './components/forms/formElements/InputContainer';
 import { createContext, useState, useContext, useEffect } from 'react';
 import { Context } from './Context';
 const EdgeFormContext = createContext();

@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { Context } from '../Context';
+import { Context } from '../../Context';
 
 export default function PageRankForm() {
   const { hideForms, graphData, getPageRank, showPageRankResult } = useContext(Context);

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { EdgeFormContext } from '../EdgeFormContext';
+import { EdgeFormContext } from '../../../EdgeFormContext';
 
 export default function ButtonsForEdgeForm() {
   const { buttonClasses, hideForms } = useContext(EdgeFormContext);

@@ -25,7 +25,7 @@ export default function App() {
   const buttonClasses =
     'bg-fuchsia-400 rounded-full text-white text-[2rem] font-medium py-1.5 px-5 hover:bg-fuchsia-500';
   return (
-    <div className="flex flex-col justify-center items-center gap-24 mt-28">
+    <div className="flex flex-col justify-center items-center gap-24 m-28">
       <Heading />
       <Graph />
       {showButtons && (

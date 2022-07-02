@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/page-rank-calculator/static/css/main.5f3bf47c.css",
-    "main.js": "/page-rank-calculator/static/js/main.981fca33.js",
+    "main.js": "/page-rank-calculator/static/js/main.b2652f09.js",
     "index.html": "/page-rank-calculator/index.html",
     "main.5f3bf47c.css.map": "/page-rank-calculator/static/css/main.5f3bf47c.css.map",
-    "main.981fca33.js.map": "/page-rank-calculator/static/js/main.981fca33.js.map"
+    "main.b2652f09.js.map": "/page-rank-calculator/static/js/main.b2652f09.js.map"
   },
   "entrypoints": [
     "static/css/main.5f3bf47c.css",
-    "static/js/main.981fca33.js"
+    "static/js/main.b2652f09.js"
   ]
 }

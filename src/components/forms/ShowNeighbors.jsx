@@ -14,8 +14,9 @@ export default function ShowNeighbors() {
   }
   const neighborsDataElements = Object.keys(graphData).map((node) => {
     return (
-      <InputContainer node={node} name="srcNode">
+      <InputContainer node={node} name="srcNode" key={node}>
         <input
+          
           className="hidden peer"
           type="radio"
           name="srcNode"

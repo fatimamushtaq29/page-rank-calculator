@@ -15,6 +15,7 @@ export default function App() {
     isShowForms,
     showButtons,
     isDisplayPageRankResult,
+    isAddingNodeDisabled
   } = useContext(Context);
   const buttonClasses =
     'bg-fuchsia-400 rounded-full text-white text-[2rem] font-medium py-1.5 px-5 hover:bg-fuchsia-500';
@@ -24,9 +25,9 @@ export default function App() {
       <Graph />
       {showButtons && (
         <div className="flex items-center justify-center gap-8 flex-wrap">
-          <button onClick={addNode} className={buttonClasses}>
+          {!isAddingNodeDisabled && <button onClick={addNode} className={buttonClasses}>
             Add Node
-          </button>
+          </button>}
 
           {/*'Add Edge' button will only be shown if there are at least 2 nodes in the graph*/}
           {Object.keys(graphData).length >= 2 && (

@@ -64,7 +64,7 @@ function EdgeFormContextProvider(props) {
   console.log(formData);
   const srcNodeRadioElements = Object.keys(graphData).map((node) => {
     return (
-      <InputContainer node={node} name="srcNode">
+      <InputContainer node={node} name="srcNode" key={node}>
         <input
           className="hidden peer"
           type="radio"
@@ -79,7 +79,7 @@ function EdgeFormContextProvider(props) {
   });
   const toNodeCheckboxElements = Object.keys(graphData).map((node) => {
     return (
-      <InputContainer node={node} name="toNode">
+      <InputContainer node={node} name="toNode" key={node}>
         <input
           className="hidden peer"
           type="checkbox"

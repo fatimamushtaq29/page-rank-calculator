@@ -4,6 +4,7 @@ const Context = createContext();
 
 function ContextProvider(props) {
   const [graphData, setGraphData] = useState(graph);
+  const [isAddingNodeDisabled, setIsAddingNodeDisabled] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
   const [isShowForms, setIsShowForms] = useState({
     edgeForm: false,
@@ -21,15 +22,21 @@ function ContextProvider(props) {
   //  'C': []
   // }
   function addNode() {
-    const graphLength = Object.keys(graphData).length;
+    if (!isAddingNodeDisabled) {
+      const graphLength = Object.keys(graphData).length;
 
-    // Add node in form of uppercase Alphabets; 65 is the ASCII code for 'A'
-    const nodeLetterToAdd = String.fromCharCode(65 + graphLength);
+      // Add node in form of uppercase Alphabets; 65 is the ASCII code for 'A'
+      const nodeLetterToAdd = String.fromCharCode(65 + graphLength);
 
-    setGraphData((prevGraphData) => ({
-      ...prevGraphData,
-      [nodeLetterToAdd]: [],
-    }));
+      setGraphData((prevGraphData) => ({
+        ...prevGraphData,
+        [nodeLetterToAdd]: [],
+      }));
+
+      if (graphLength === 25) {
+        setIsAddingNodeDisabled(true);
+      }
+    }
   }
 
   // Add Edges to a given node. Edges will be in form of an array: linkNodeArray
@@ -172,6 +179,7 @@ function ContextProvider(props) {
         showPageRankResult,
         hidePageRankResult,
         pageRanks,
+        isAddingNodeDisabled,
       }}
     >
       {props.children}

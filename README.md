@@ -31,6 +31,8 @@ Users should be able to:
 - Javascript
 - Tailwind
 
+All of the app functions are in Context and EdgeFormContext files
+
 ## Assumptions
 
 - damping factor is going to be 0.85
@@ -41,5 +43,14 @@ Users should be able to:
 - in the above image, keys are all the nodes and values are corresponding edges
 - It is assumed that graph will not include self-edge to a node, for example node 'A' can not have 'A' in it's corresponding edges array
 - If the edge array includes a node, then that must be a key/node as well in graph, for example if node 'A' has a link to 'F', then 'F' must be in the graph object as a node/key even if it does not have any outgoing links, 'F' edges will be an empty array
+
+
+## Limitations
+
+- User can add only 26 nodes from 'A' to 'Z'
 - Number of iterations will be between 10-100 for calculating Page Rank
 
+## To Be Added
+
+- Unit Testing - This project does not have any unit testing capabilities
+- Graph Visualization

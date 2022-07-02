@@ -6,4 +6,4 @@ PageRank (PR) is an algorithm used by Google Search to rank web pages in their s
 
 ## Formula
 
-![](/image/pagerank-formula.png)
+![](/images/pagerank-formula.jpg)

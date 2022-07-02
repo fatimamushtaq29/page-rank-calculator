@@ -25,6 +25,13 @@ Users should be able to:
 - Get neighboring nodes given a node
 - Calculate Page Ranks of all nodes where user will provide number of iterations
 
+## Demo
+
+[https://fatimamushtaq29.github.io/page-rank-calculator/](https://fatimamushtaq29.github.io/page-rank-calculator/)
+
+Please refresh this site if it doesn't load on first try. 
+Sometimes there is this error in the console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'. I am still trying to figure it out.
+
 ## Built with
 
 - React

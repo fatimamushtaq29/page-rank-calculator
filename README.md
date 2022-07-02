@@ -7,3 +7,38 @@ PageRank (PR) is an algorithm used by Google Search to rank web pages in their s
 ## Formula
 
 ![](/images/pagerank-formula.jpg)
+
+In the above formula Page Rank of A is being calculated. 
+B, C, and D are incoming links to A.
+PR(B), PR(C), PR(D) are Page Ranks of B, C and D at previous iteration.
+Assumption: In iteration 0, all nodes have an equal Page Rank of 1 divided by total number of nodes.
+L(B), L(C), L(D) are outbound links of B, C and D
+N is the total number of nodes
+d is the damping factor. The probability, at any step, that the person will continue is a damping factor d. It is usually set to 0.85
+
+## Project Overview
+
+Users should be able to:
+
+- Add nodes to a graph
+- Add/Edit/Delete edges to a graph
+- Get neighboring nodes given a node
+- Calculate Page Ranks of all nodes where user will provide number of iterations
+
+## Built with
+
+- React
+- Javascript
+- Tailwind
+
+## Assumptions
+
+- damping factor is going to be 0.85
+- graph will be in the form of an object with adjacency lists to demonstrate edges/links like shown in image below
+
+![](/images/graph-format.jpg)
+
+- in the above image, keys are all the nodes and values are corresponding edges
+- It is assumed that graph will not include self-edge to a node, for example node 'A' can not have 'A' in it's corresponding edges array
+- If the edge array includes a node, then that must be a key/node as well in graph, for example if node 'A' has a link to 'F', then 'F' must be in the graph object as a node/key even if it does not have any outgoing links, 'F' edges will be an empty array
+

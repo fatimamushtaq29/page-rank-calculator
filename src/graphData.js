@@ -1,8 +1,3 @@
-const graph = {
-'A': ['B', 'C'],
-'B': ['D'],
-'C': ['A', 'B', 'D'],
-'D': ['C'],
-}
+const graph = {}
 
 export default graph

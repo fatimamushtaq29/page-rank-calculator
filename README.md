@@ -8,13 +8,13 @@ PageRank (PR) is an algorithm used by Google Search to rank web pages in their s
 
 ![](/images/pagerank-formula.jpg)
 
-In the above formula Page Rank of A is being calculated. 
-B, C, and D are incoming links to A.
-PR(B), PR(C), PR(D) are Page Ranks of B, C and D at previous iteration.
-Assumption: In iteration 0, all nodes have an equal Page Rank of 1 divided by total number of nodes.
-L(B), L(C), L(D) are outbound links of B, C and D
-N is the total number of nodes
-d is the damping factor. The probability, at any step, that the person will continue is a damping factor d. It is usually set to 0.85
+- In the above formula Page Rank of A is being calculated. 
+- B, C, and D are incoming links to A.
+- PR(B), PR(C), PR(D) are Page Ranks of B, C and D at previous iteration.
+- Assumption: In iteration 0, all nodes have an equal Page Rank of 1 divided by total number of nodes.
+- L(B), L(C), L(D) are outbound links of B, C and D
+- N is the total number of nodes
+- d is the damping factor. The probability, at any step, that the person will continue is a damping factor d. It is usually set to 0.85
 
 ## Project Overview
 
@@ -41,4 +41,5 @@ Users should be able to:
 - in the above image, keys are all the nodes and values are corresponding edges
 - It is assumed that graph will not include self-edge to a node, for example node 'A' can not have 'A' in it's corresponding edges array
 - If the edge array includes a node, then that must be a key/node as well in graph, for example if node 'A' has a link to 'F', then 'F' must be in the graph object as a node/key even if it does not have any outgoing links, 'F' edges will be an empty array
+- Number of iterations will be between 10-100 for calculating Page Rank
 

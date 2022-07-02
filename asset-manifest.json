@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/page-rank-calculator/static/css/main.f6a59941.css",
-    "main.js": "/page-rank-calculator/static/js/main.c897213b.js",
+    "main.css": "/page-rank-calculator/static/css/main.5f3bf47c.css",
+    "main.js": "/page-rank-calculator/static/js/main.72884afc.js",
     "index.html": "/page-rank-calculator/index.html",
-    "main.f6a59941.css.map": "/page-rank-calculator/static/css/main.f6a59941.css.map",
-    "main.c897213b.js.map": "/page-rank-calculator/static/js/main.c897213b.js.map"
+    "main.5f3bf47c.css.map": "/page-rank-calculator/static/css/main.5f3bf47c.css.map",
+    "main.72884afc.js.map": "/page-rank-calculator/static/js/main.72884afc.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6a59941.css",
-    "static/js/main.c897213b.js"
+    "static/css/main.5f3bf47c.css",
+    "static/js/main.72884afc.js"
   ]
 }
